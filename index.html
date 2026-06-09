@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi rasmiy sayti"/>
+<title>Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#002a78",
+          "primary-fixed": "#dbe1ff",
+          "on-primary-fixed": "#00174b",
+          "on-primary-container": "#7a95e8",
+          "on-tertiary-container": "#00a7c9",
+          "tertiary-container": "#003643",
+          "tertiary-fixed": "#b4ebff",
+          "primary-container": "#002a78",
+          "on-primary-fixed-variant": "#23428f",
+          "secondary": "#595f67",
+          "surface": "#f9f9fc",
+          "surface-container-low": "#f3f3f6",
+          "surface-container": "#eeeef0",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#e8e8ea",
+          "surface-variant": "#e2e2e5",
+          "secondary-fixed": "#dee3ed",
+          "secondary-fixed-dim": "#c1c7d0",
+          "on-background": "#1a1c1e",
+          "on-surface": "#1a1c1e",
+          "on-surface-variant": "#444651",
+          "on-primary": "#ffffff",
+          "outline": "#747682",
+          "outline-variant": "#c4c6d3",
+          "background": "#f9f9fc",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "tertiary": "#001f28",
+        },
+        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        spacing: { "margin-mobile": "16px", "margin-desktop": "64px" },
+        fontFamily: { "sans": ["Montserrat", "system-ui", "sans-serif"] },
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Montserrat', sans-serif; }
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal; font-style: normal; font-size: 24px;
+    display: inline-block; line-height: 1; text-transform: none;
+    letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr;
+  }
+  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-256px * 8)); } }
+  .scroller-track { animation: scroll 40s linear infinite; }
+  .scroller-container:hover .scroller-track { animation-play-state: paused; }
+
+  @keyframes scroll-video { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-424px * 5)); } }
+  .video-scroller-track { animation: scroll-video 30s linear infinite; }
+  .video-scroller-container:hover .video-scroller-track { animation-play-state: paused; }
+
+  @keyframes scroll-vertical { 0% { transform: translateY(0); } 100% { transform: translateY(calc(-136px * 5)); } }
+  .vertical-scroller-track { animation: scroll-vertical 20s linear infinite; }
+  .vertical-scroller-container:hover .vertical-scroller-track { animation-play-state: paused; }
+
+  .hero-slide { transition: opacity 0.6s ease-in-out; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .modal-backdrop { backdrop-filter: blur(4px); }
+</style>
+</head>
+<body class="bg-background text-on-background antialiased">
+
+<!-- Top Nav -->
+<nav class="bg-surface border-b border-outline-variant shadow-sm w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-4">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M4 8 L4 22 M4 8 L14 14 L24 8 M24 8 L24 22" stroke="#ffffff" stroke-width="2.2" stroke-linecap="square" fill="none"/>
+          <circle cx="14" cy="14" r="1.8" fill="#dbe1ff"/>
+        </svg>
+      </div>
+      <span class="text-[18px] leading-tight font-bold text-primary hidden md:block max-w-[320px]">Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi</span>
+    </div>
+
+    <div class="hidden lg:flex items-center gap-1">
+      <a class="text-[14px] font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors py-2 px-3 rounded" href="#about">Markaz haqida</a>
+      <a class="text-[14px] font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors py-2 px-3 rounded" href="#research">Tadqiqotlar</a>
+      <a class="text-[14px] font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors py-2 px-3 rounded" href="#news">Yangiliklar</a>
+      <a class="text-[14px] font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors py-2 px-3 rounded" href="#analytics">Tahlillar</a>
+      <a class="text-[14px] font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors py-2 px-3 rounded" href="#projects">Loyihalar</a>
+      <a class="text-[14px] font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors py-2 px-3 rounded" href="#partners">Hamkorlik</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button id="searchBtn" class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-primary transition-colors" title="Qidirish">search</button>
+
+      <div class="hidden md:flex items-center gap-1 border border-outline-variant rounded p-1">
+        <button id="fontDec" class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-low text-primary font-bold transition-colors text-xs">A-</button>
+        <button id="fontReset" class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-low text-primary font-bold transition-colors text-sm border-x border-outline-variant">A</button>
+        <button id="fontInc" class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-low text-primary font-bold transition-colors text-base">A+</button>
+      </div>
+
+      <div class="hidden md:flex items-center text-[12px] font-semibold text-primary border border-primary rounded overflow-hidden">
+        <button data-lang="UZ" class="lang-btn px-2.5 py-1.5 bg-primary text-white">UZ</button>
+        <button data-lang="RU" class="lang-btn px-2.5 py-1.5 hover:bg-primary/10 transition border-x border-primary/30">RU</button>
+        <button data-lang="EN" class="lang-btn px-2.5 py-1.5 hover:bg-primary/10 transition">EN</button>
+      </div>
+
+      <button class="text-[14px] font-semibold bg-primary-container text-on-primary hover:bg-primary-container/90 px-4 py-2 rounded transition-colors">Kirish</button>
+
+      <button id="adminBtn" class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-primary transition-colors" title="Admin panel">admin_panel_settings</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="relative w-full h-[600px] overflow-hidden">
+  <div class="absolute inset-0" id="hero-slider">
+    <div class="hero-slide absolute inset-0 opacity-100" data-slide="0">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/85 to-primary-container/40"></div>
+      <div class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop z-10 flex flex-col items-start justify-center h-full text-on-primary">
+        <div class="inline-flex items-center gap-2 bg-on-tertiary-container text-tertiary-fixed px-3 py-1 rounded-sm mb-6">
+          <span class="material-symbols-outlined text-sm">calendar_today</span>
+          <span class="text-sm font-medium">25 May 2026</span>
+        </div>
+        <h1 class="text-[40px] md:text-[56px] font-bold max-w-3xl mb-4 leading-tight tracking-tight">Raqobat siyosati va iste'molchilar huquqlari bo'yicha ilmiy-amaliy tadqiqotlar</h1>
+        <p class="text-[18px] max-w-2xl text-secondary-fixed-dim leading-relaxed">Markaz raqobat muhitini rivojlantirish, iste'molchilar huquqlarini himoya qilish va bozor tahlillari bo'yicha mustaqil tadqiqotlar olib boradi.</p>
+        <div class="flex gap-3 mt-8">
+          <button class="bg-white text-primary hover:bg-secondary-fixed px-6 py-3 rounded font-semibold text-[14px] transition-colors flex items-center gap-2">
+            Batafsil <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </button>
+          <button class="border border-white/40 text-white hover:bg-white/10 px-6 py-3 rounded font-semibold text-[14px] transition-colors">Tadqiqotlar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide absolute inset-0 opacity-0" data-slide="1">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/85 to-primary-container/40"></div>
+      <div class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop z-10 flex flex-col items-start justify-center h-full text-on-primary">
+        <div class="inline-flex items-center gap-2 bg-on-tertiary-container text-tertiary-fixed px-3 py-1 rounded-sm mb-6">
+          <span class="material-symbols-outlined text-sm">calendar_today</span>
+          <span class="text-sm font-medium">22 May 2026</span>
+        </div>
+        <h1 class="text-[40px] md:text-[56px] font-bold max-w-3xl mb-4 leading-tight tracking-tight">Iste'molchilar huquqlarini himoya qilish sohasida yangi loyihalar</h1>
+        <p class="text-[18px] max-w-2xl text-secondary-fixed-dim leading-relaxed">Zamonaviy yondashuvlar va xalqaro tajribaga asoslangan holda iste'molchilarning huquqiy savodxonligini oshirish.</p>
+      </div>
+    </div>
+
+    <div class="hero-slide absolute inset-0 opacity-0" data-slide="2">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/85 to-primary-container/40"></div>
+      <div class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop z-10 flex flex-col items-start justify-center h-full text-on-primary">
+        <div class="inline-flex items-center gap-2 bg-on-tertiary-container text-tertiary-fixed px-3 py-1 rounded-sm mb-6">
+          <span class="material-symbols-outlined text-sm">calendar_today</span>
+          <span class="text-sm font-medium">18 May 2026</span>
+        </div>
+        <h1 class="text-[40px] md:text-[56px] font-bold max-w-3xl mb-4 leading-tight tracking-tight">Raqamli bozorlarda raqobat muhiti tahlili</h1>
+        <p class="text-[18px] max-w-2xl text-secondary-fixed-dim leading-relaxed">Elektron tijorat va raqamli platformalarda yuzaga kelayotgan tendensiyalar hamda ularning iqtisodiyotga ta'siri.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-12 left-0 w-full z-20">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="flex gap-2">
+        <button class="slider-dot w-8 h-1 rounded-full bg-white transition-all" data-index="0"></button>
+        <button class="slider-dot w-8 h-1 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-index="1"></button>
+        <button class="slider-dot w-8 h-1 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-index="2"></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Latest News -->
+<section id="news" class="w-full bg-surface-container-low py-16">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="text-[32px] font-bold text-primary">Oxirgi yangiliklar</h2>
+      <a href="#" class="hidden md:flex items-center gap-2 text-[14px] font-semibold text-primary hover:gap-3 transition-all">Barchasi <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 h-[500px]">
+      <article class="lg:col-span-2 bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex flex-col cursor-pointer group h-full">
+        <div class="w-full h-[60%] overflow-hidden relative bg-surface-variant">
+          <img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"/>
+          <span class="absolute top-4 left-4 bg-primary text-white text-[11px] font-bold px-3 py-1 rounded uppercase tracking-wider">Etakchi</span>
+        </div>
+        <div class="p-6 flex flex-col flex-grow bg-surface">
+          <span class="text-sm text-on-surface-variant mb-2">25 May 2026 · 4 daqiqalik o'qish</span>
+          <h3 class="text-[24px] leading-tight font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Raqobat muhitini yaxshilash bo'yicha yangi choralar belgilandi</h3>
+          <p class="text-on-surface-variant line-clamp-2">O'zbekiston Respublikasi Prezidentining qaroriga muvofiq, raqobat muhitini rivojlantirish va iste'molchilar huquqlarini himoya qilish borasida qator yangi vazifalar belgilandi.</p>
+        </div>
+      </article>
+
+      <div class="vertical-scroller-container relative h-full overflow-hidden rounded-xl bg-surface-container-low">
+        <div class="vertical-scroller-track flex flex-col gap-4 absolute top-0 w-full pr-2">
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">24 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Iste'molchilar huquqlari himoyasi kuchaytirilmoqda</h3>
+            </div>
+          </article>
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">22 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Bozor tahlillari: joriy yilning birinchi choragi yakunlari</h3>
+            </div>
+          </article>
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">20 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Xalqaro hamkorlik doirasida yangi memorandum imzolandi</h3>
+            </div>
+          </article>
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">18 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Tadbirkorlar uchun navbatdagi maslahat uchrashuvi bo'lib o'tdi</h3>
+            </div>
+          </article>
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">15 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Raqamli iqtisodiyot bo'yicha ekspert tahlili e'lon qilindi</h3>
+            </div>
+          </article>
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">24 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Iste'molchilar huquqlari himoyasi kuchaytirilmoqda</h3>
+            </div>
+          </article>
+          <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition-shadow flex cursor-pointer group h-[120px] flex-shrink-0">
+            <div class="w-[120px] overflow-hidden bg-surface-variant flex-shrink-0"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80" alt=""/></div>
+            <div class="p-4 flex flex-col flex-grow justify-center">
+              <span class="text-xs text-on-surface-variant mb-1">22 May 2026</span>
+              <h3 class="text-sm leading-snug font-semibold text-on-surface line-clamp-2 group-hover:text-primary transition-colors">Bozor tahlillari: joriy yilning birinchi choragi yakunlari</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About / Activities -->
+<section id="about" class="w-full bg-surface py-16">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-outline-variant pb-4">
+        <div class="flex gap-6 overflow-x-auto w-full md:w-auto no-scrollbar mb-4 md:mb-0">
+          <button data-tab="about" class="about-tab text-[14px] font-semibold text-primary border-b-2 border-primary pb-2 whitespace-nowrap">Markaz haqida</button>
+          <button data-tab="lectures" class="about-tab text-[14px] font-semibold text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">Ma'ruzalar</button>
+          <button data-tab="directions" class="about-tab text-[14px] font-semibold text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">Tadqiqot yo'nalishlari</button>
+        </div>
+        <button class="text-[14px] font-semibold text-primary border border-outline-variant hover:bg-surface-container-low px-4 py-2 rounded transition-colors whitespace-nowrap">Batafsil</button>
+      </div>
+
+      <div id="content-about" class="about-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-[24px] font-semibold text-on-surface mb-4">Innovatsion tadqiqotlar va tahlillar markazi</h3>
+          <p class="text-on-surface-variant mb-6 leading-relaxed">Biz raqobat siyosati va iste'molchilar huquqlarini himoya qilish sohasida ilg'or tadqiqotlar olib boramiz. Maqsadimiz — adolatli bozor muhitini yaratish va iste'molchilar farovonligini ta'minlash.</p>
+          <p class="text-on-surface-variant leading-relaxed">Markaz mustaqil ekspertlar jamoasi sifatida davlat siyosatiga ko'maklashish, qonunchilikni takomillashtirish va xalqaro tajribani amaliyotga tatbiq etish bilan shug'ullanadi.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-surface-container-low p-5 rounded-lg hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300">
+            <div class="text-[32px] font-bold text-primary mb-1 stat-num" data-target="156">0</div>
+            <div class="text-sm text-on-surface-variant">Tadqiqotlar</div>
+          </div>
+          <div class="bg-surface-container-low p-5 rounded-lg hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300">
+            <div class="text-[32px] font-bold text-primary mb-1 stat-num" data-target="45">0</div>
+            <div class="text-sm text-on-surface-variant">Ekspertlar</div>
+          </div>
+          <div class="bg-surface-container-low p-5 rounded-lg hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300">
+            <div class="text-[32px] font-bold text-primary mb-1 stat-num" data-target="32">0</div>
+            <div class="text-sm text-on-surface-variant">Loyihalar</div>
+          </div>
+          <div class="bg-surface-container-low p-5 rounded-lg hover:-translate-y-1 hover:shadow-md hover:shadow-primary/10 transition-all duration-300">
+            <div class="text-[32px] font-bold text-primary mb-1 stat-num" data-target="24">0</div>
+            <div class="text-sm text-on-surface-variant">Hamkorlar</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-lectures" class="about-content hidden">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-surface-container-low p-6 rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl mb-3">school</span>
+            <h4 class="font-semibold text-on-surface mb-2">Raqobat huquqi asoslari</h4>
+            <p class="text-sm text-on-surface-variant">Tadbirkorlar va yuristlar uchun 6-bosqichli o'quv kursi.</p>
+            <div class="text-xs text-primary mt-3 font-semibold">12 ma'ruza · 4 hafta</div>
+          </div>
+          <div class="bg-surface-container-low p-6 rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl mb-3">groups</span>
+            <h4 class="font-semibold text-on-surface mb-2">Iste'molchi huquqlari ustaxonasi</h4>
+            <p class="text-sm text-on-surface-variant">Amaliy keyslar bilan ishlash bo'yicha intensiv dastur.</p>
+            <div class="text-xs text-primary mt-3 font-semibold">8 ma'ruza · 2 hafta</div>
+          </div>
+          <div class="bg-surface-container-low p-6 rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl mb-3">analytics</span>
+            <h4 class="font-semibold text-on-surface mb-2">Bozor tahlili metodologiyasi</h4>
+            <p class="text-sm text-on-surface-variant">HHI, SSNIP testi va boshqa zamonaviy usullar.</p>
+            <div class="text-xs text-primary mt-3 font-semibold">10 ma'ruza · 3 hafta</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-directions" class="about-content hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex gap-4 p-5 bg-surface-container-low rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl">balance</span>
+            <div><h4 class="font-semibold text-on-surface mb-1">Antimonopol siyosat</h4><p class="text-sm text-on-surface-variant">Bozor kontsentratsiyasi, birlashish nazorati, dominant pozitsiya.</p></div>
+          </div>
+          <div class="flex gap-4 p-5 bg-surface-container-low rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl">shield_person</span>
+            <div><h4 class="font-semibold text-on-surface mb-1">Iste'molchi himoyasi</h4><p class="text-sm text-on-surface-variant">Adolatsiz amaliyot, shaffoflik, shikoyat mexanizmlari.</p></div>
+          </div>
+          <div class="flex gap-4 p-5 bg-surface-container-low rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl">hub</span>
+            <div><h4 class="font-semibold text-on-surface mb-1">Raqamli iqtisodiyot</h4><p class="text-sm text-on-surface-variant">Platformalar, algoritmik narxlash, ma'lumot bozorlari.</p></div>
+          </div>
+          <div class="flex gap-4 p-5 bg-surface-container-low rounded-lg hover:shadow-md transition">
+            <span class="material-symbols-outlined text-primary text-3xl">public</span>
+            <div><h4 class="font-semibold text-on-surface mb-1">Xalqaro qiyos</h4><p class="text-sm text-on-surface-variant">OECD, EU, ICN — global standartlar va milliy moslashuv.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research -->
+<section id="research" class="w-full bg-surface-container-low py-16">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <h2 class="text-[32px] font-bold text-primary mb-2">Tadqiqotlar va nashrlar</h2>
+        <p class="text-on-surface-variant">Markaz tomonidan e'lon qilingan eng so'nggi ilmiy-amaliy ishlar</p>
+      </div>
+      <a href="#" class="hidden md:flex items-center gap-2 text-[14px] font-semibold text-primary hover:gap-3 transition-all">Barchasi <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-primary/10 text-primary text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Hisobot</span><span class="text-xs text-on-surface-variant">№47 · 84 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition">Raqamli platformalar va bozor kuchi: O'zbekiston konteksti</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Onlayn marketpleyslar, kuryer ilovalari va raqamli moliya xizmatlaridagi raqobat dinamikasini empirik baholash.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">25.03.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-tertiary-container/20 text-tertiary-container text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Brifing</span><span class="text-xs text-on-surface-variant">№46 · 32 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition">Sun'iy intellekt va algoritmik narxlash bo'yicha tavsiyalar</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Avtomatlashtirilgan narx belgilash tizimlarining raqobatga ta'siri va xalqaro tajriba.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">18.03.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-on-tertiary-container/20 text-on-tertiary-container text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Tahlil</span><span class="text-xs text-on-surface-variant">№45 · 56 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition">Telekommunikatsiya bozoridagi HHI dinamikasi: 2018–2025</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Mobil aloqa va internet xizmatlari bozoridagi kontsentratsiya o'zgarishlari.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">11.03.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Video Media -->
+<section class="w-full bg-surface py-16 overflow-hidden">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-[32px] font-bold text-primary">Video materiallar</h2>
+      <a href="#" class="hidden md:flex items-center gap-2 text-[14px] font-semibold text-primary hover:gap-3 transition-all">Barchasi <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+    </div>
+
+    <div class="video-scroller-container relative w-full overflow-hidden h-[300px]">
+      <div class="video-scroller-track flex gap-6 absolute left-0 h-full">
+        <div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+          <div class="relative w-full h-[225px] rounded-xl overflow-hidden mb-4">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80" alt=""/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-white text-4xl">play_arrow</span></div></div>
+            <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Seminar</div>
+            <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">45:20</div>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Raqobat muhitini baholash metodologiyasi bo'yicha seminar-trening</h3>
+        </div>
+        <div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+          <div class="relative w-full h-[225px] rounded-xl overflow-hidden mb-4">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=800&q=80" alt=""/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-white text-4xl">play_arrow</span></div></div>
+            <div class="absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Intervyu</div>
+            <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">12:45</div>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Iste'molchilar huquqlarini himoya qilish sohasidagi yangi qonunchilik talablari</h3>
+        </div>
+        <div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+          <div class="relative w-full h-[225px] rounded-xl overflow-hidden mb-4">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=800&q=80" alt=""/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-white text-4xl">play_arrow</span></div></div>
+            <div class="absolute top-3 left-3 bg-tertiary text-white text-xs font-bold px-2 py-1 rounded">Tahlil</div>
+            <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">28:10</div>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Raqamli bozorlarda monopoliyaga qarshi kurashish tajribasi</h3>
+        </div>
+        <div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+          <div class="relative w-full h-[225px] rounded-xl overflow-hidden mb-4">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80" alt=""/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-white text-4xl">play_arrow</span></div></div>
+            <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Brifing</div>
+            <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">15:30</div>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Markaz faoliyati yuzasidan ommaviy axborot vositalari uchun brifing</h3>
+        </div>
+        <div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+          <div class="relative w-full h-[225px] rounded-xl overflow-hidden mb-4">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt=""/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-white text-4xl">play_arrow</span></div></div>
+            <div class="absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Konferentsiya</div>
+            <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">1:24:15</div>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Markaziy Osiyo raqobat huquqi forumi 2025 — to'liq yozuv</h3>
+        </div>
+        <!-- Duplicates -->
+        <div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+          <div class="relative w-full h-[225px] rounded-xl overflow-hidden mb-4">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80" alt=""/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"><span class="material-symbols-outlined text-white text-4xl">play_arrow</span></div></div>
+            <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Seminar</div>
+            <div class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">45:20</div>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface line-clamp-2">Raqobat muhitini baholash metodologiyasi bo'yicha seminar-trening</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Analytics -->
+<section id="analytics" class="w-full bg-primary py-16 text-on-primary">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="inline-block bg-on-tertiary-container/20 text-tertiary-fixed text-[11px] font-bold px-3 py-1 rounded uppercase tracking-widest mb-3">Jonli ma'lumotlar</span>
+        <h2 class="text-[32px] font-bold mb-2">Bozor indikatorlari</h2>
+        <p class="text-secondary-fixed-dim max-w-xl">Asosiy makroindikatorlar — Markaz ma'lumotlar bazasi va Davlat statistika qo'mitasidan yangilanadi.</p>
+      </div>
+      <button class="border border-white/30 text-white hover:bg-white/10 px-5 py-2.5 rounded font-semibold text-[14px] transition-colors flex items-center gap-2">Ochiq ma'lumotlar <span class="material-symbols-outlined text-base">database</span></button>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-on-primary-fixed/40 border border-white/10 p-5 rounded-xl">
+        <div class="flex items-center justify-between mb-4"><span class="text-xs uppercase tracking-widest text-secondary-fixed-dim">HHI indeksi</span><span class="material-symbols-outlined text-tertiary-fixed text-lg">monitoring</span></div>
+        <div class="text-[36px] font-bold mb-1 stat-num" data-target="1847">0</div>
+        <div class="flex items-center gap-2 text-xs"><span class="text-tertiary-fixed">↘ −124</span><span class="text-secondary-fixed-dim/70">o'tgan chorakka</span></div>
+        <svg class="mt-4 w-full h-10" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,12 25,18 50,8 75,20 100,15 125,25 150,18 175,28 200,22" fill="none" stroke="#3cd7ff" stroke-width="1.5"/></svg>
+      </div>
+      <div class="bg-on-primary-fixed/40 border border-white/10 p-5 rounded-xl">
+        <div class="flex items-center justify-between mb-4"><span class="text-xs uppercase tracking-widest text-secondary-fixed-dim">Shikoyatlar</span><span class="material-symbols-outlined text-tertiary-fixed text-lg">support_agent</span></div>
+        <div class="text-[36px] font-bold mb-1 stat-num" data-target="4892">0</div>
+        <div class="flex items-center gap-2 text-xs"><span class="text-tertiary-fixed">↗ +12.4%</span><span class="text-secondary-fixed-dim/70">yillik</span></div>
+        <svg class="mt-4 w-full h-10" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,32 25,28 50,30 75,22 100,24 125,18 150,14 175,12 200,8" fill="none" stroke="#3cd7ff" stroke-width="1.5"/></svg>
+      </div>
+      <div class="bg-on-primary-fixed/40 border border-white/10 p-5 rounded-xl">
+        <div class="flex items-center justify-between mb-4"><span class="text-xs uppercase tracking-widest text-secondary-fixed-dim">Birlashishlar</span><span class="material-symbols-outlined text-tertiary-fixed text-lg">hub</span></div>
+        <div class="text-[36px] font-bold mb-1 stat-num" data-target="38">0</div>
+        <div class="flex items-center gap-2 text-xs"><span class="text-tertiary-fixed">↗ +6</span><span class="text-secondary-fixed-dim/70">tasdiqlangan</span></div>
+        <svg class="mt-4 w-full h-10" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,28 25,22 50,26 75,20 100,18 125,22 150,16 175,14 200,10" fill="none" stroke="#3cd7ff" stroke-width="1.5"/></svg>
+      </div>
+      <div class="bg-on-primary-fixed/40 border border-white/10 p-5 rounded-xl">
+        <div class="flex items-center justify-between mb-4"><span class="text-xs uppercase tracking-widest text-secondary-fixed-dim">Antimonopol</span><span class="material-symbols-outlined text-tertiary-fixed text-lg">gavel</span></div>
+        <div class="text-[36px] font-bold mb-1 stat-num" data-target="17">0</div>
+        <div class="flex items-center gap-2 text-xs"><span class="text-tertiary-fixed">↘ −3</span><span class="text-secondary-fixed-dim/70">faol ish</span></div>
+        <svg class="mt-4 w-full h-10" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,18 25,22 50,16 75,24 100,20 125,18 150,22 175,26 200,30" fill="none" stroke="#3cd7ff" stroke-width="1.5"/></svg>
+      </div>
+    </div>
+    <p class="text-xs text-secondary-fixed-dim/60 mt-6">↻ So'nggi yangilash: 24.05.2026, 18:42</p>
+  </div>
+</section>
+
+<!-- Interactive Services -->
+<section id="projects" class="w-full bg-surface py-16">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <h2 class="text-[32px] font-bold text-primary mb-2 text-center">Interaktiv xizmatlar</h2>
+    <p class="text-on-surface-variant text-center mb-8 max-w-2xl mx-auto">Markaz xizmatlaridan onlayn foydalaning — murojaatlar, ma'lumotlar va ekspert maslahatlari</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container to-primary p-6 text-on-primary hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1" href="#">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><span class="material-symbols-outlined text-6xl">edit_document</span></div>
+        <span class="material-symbols-outlined text-4xl mb-4 bg-white/20 p-3 rounded-lg backdrop-blur-sm inline-block">edit_document</span>
+        <h3 class="text-xl font-semibold mb-2">Murojaat yuborish</h3>
+        <p class="text-sm text-on-primary/80">Elektron shaklda murojaat yo'llash</p>
+        <div class="mt-4 flex items-center text-sm font-bold text-primary-fixed group-hover:text-white transition-colors">Kirish <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div>
+      </a>
+      <a class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1e40af] to-[#3b82f6] p-6 text-white hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1" href="#">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><span class="material-symbols-outlined text-6xl">database</span></div>
+        <span class="material-symbols-outlined text-4xl mb-4 bg-white/20 p-3 rounded-lg backdrop-blur-sm inline-block">database</span>
+        <h3 class="text-xl font-semibold mb-2">Tadqiqotlar bazasi</h3>
+        <p class="text-sm text-white/80">Ochiq ma'lumotlar va tahlillar bazasi</p>
+        <div class="mt-4 flex items-center text-sm font-bold text-blue-200 group-hover:text-white transition-colors">Kirish <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div>
+      </a>
+      <a class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-[#0369a1] to-[#0ea5e9] p-6 text-white hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300 transform hover:-translate-y-1" href="#">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><span class="material-symbols-outlined text-6xl">download</span></div>
+        <span class="material-symbols-outlined text-4xl mb-4 bg-white/20 p-3 rounded-lg backdrop-blur-sm inline-block">download</span>
+        <h3 class="text-xl font-semibold mb-2">Hisobotlarni yuklab olish</h3>
+        <p class="text-sm text-white/80">Yillik va choraklik hisobotlar</p>
+        <div class="mt-4 flex items-center text-sm font-bold text-sky-200 group-hover:text-white transition-colors">Kirish <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div>
+      </a>
+      <a class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-[#0f766e] to-[#14b8a6] p-6 text-white hover:shadow-lg hover:shadow-teal-500/30 transition-all duration-300 transform hover:-translate-y-1" href="#">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><span class="material-symbols-outlined text-6xl">support_agent</span></div>
+        <span class="material-symbols-outlined text-4xl mb-4 bg-white/20 p-3 rounded-lg backdrop-blur-sm inline-block">support_agent</span>
+        <h3 class="text-xl font-semibold mb-2">Ekspert bilan bog'lanish</h3>
+        <p class="text-sm text-white/80">Mutaxassislardan onlayn maslahat</p>
+        <div class="mt-4 flex items-center text-sm font-bold text-teal-200 group-hover:text-white transition-colors">Kirish <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Useful Links -->
+<section id="partners" class="w-full bg-surface-container-low py-12 overflow-hidden border-t border-outline-variant/30">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop mb-6 flex justify-between items-center">
+    <h2 class="text-2xl font-bold text-on-surface">Foydali havolalar va hamkorlar</h2>
+    <div class="flex gap-2">
+      <button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+      <button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+    </div>
+  </div>
+
+  <div class="scroller-container relative w-full overflow-hidden flex items-center h-32">
+    <div class="scroller-track flex gap-6 absolute left-0 px-6">
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">account_balance</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">O'zbekiston Respublikasi Hukumati portali</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">gavel</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Raqobatni rivojlantirish qo'mitasi</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">public</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">OECD — xalqaro hamkorlik</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">monitoring</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Davlat statistika qo'mitasi</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">school</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">TDIU — Toshkent Davlat Iqtisodiyot Universiteti</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">balance</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Adliya vazirligi</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">savings</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Markaziy Bank</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">handshake</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">UNCTAD — savdo va rivojlanish</div></a>
+      <!-- Duplicates -->
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">account_balance</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">O'zbekiston Respublikasi Hukumati portali</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">gavel</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Raqobatni rivojlantirish qo'mitasi</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">public</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">OECD — xalqaro hamkorlik</div></a>
+      <a class="w-[240px] flex-shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/50 p-4 flex items-center gap-3 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,42,120,0.15)] transition-all group" href="#"><div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">monitoring</span></div><div class="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Davlat statistika qo'mitasi</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full bg-primary text-on-primary pt-16 pb-8">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M4 8 L4 22 M4 8 L14 14 L24 8 M24 8 L24 22" stroke="#002a78" stroke-width="2.2" stroke-linecap="square" fill="none"/>
+              <circle cx="14" cy="14" r="1.8" fill="#002a78"/>
+            </svg>
+          </div>
+          <span class="text-[15px] font-bold leading-tight">Markaz</span>
+        </div>
+        <p class="text-secondary-fixed-dim text-sm leading-relaxed mb-5">Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi — mustaqil ilmiy-amaliy tahlil va davlat siyosatiga ko'maklashish muassasasi.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition"><span class="material-symbols-outlined text-base">mail</span></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition"><span class="material-symbols-outlined text-base">send</span></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition"><span class="material-symbols-outlined text-base">rss_feed</span></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-[13px] font-bold uppercase tracking-widest text-tertiary-fixed mb-4">Navigatsiya</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#about" class="text-secondary-fixed-dim hover:text-white transition">Markaz haqida</a></li>
+          <li><a href="#research" class="text-secondary-fixed-dim hover:text-white transition">Tadqiqotlar</a></li>
+          <li><a href="#news" class="text-secondary-fixed-dim hover:text-white transition">Yangiliklar</a></li>
+          <li><a href="#analytics" class="text-secondary-fixed-dim hover:text-white transition">Tahlillar</a></li>
+          <li><a href="#projects" class="text-secondary-fixed-dim hover:text-white transition">Loyihalar</a></li>
+          <li><a href="#partners" class="text-secondary-fixed-dim hover:text-white transition">Hamkorlik</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-[13px] font-bold uppercase tracking-widest text-tertiary-fixed mb-4">Resurslar</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-secondary-fixed-dim hover:text-white transition">Hisobotlar arxivi</a></li>
+          <li><a href="#" class="text-secondary-fixed-dim hover:text-white transition">Ochiq ma'lumotlar</a></li>
+          <li><a href="#" class="text-secondary-fixed-dim hover:text-white transition">Video kutubxona</a></li>
+          <li><a href="#" class="text-secondary-fixed-dim hover:text-white transition">Glossariy</a></li>
+          <li><a href="#" class="text-secondary-fixed-dim hover:text-white transition">Vakansiyalar</a></li>
+          <li><a href="#" class="text-secondary-fixed-dim hover:text-white transition">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-[13px] font-bold uppercase tracking-widest text-tertiary-fixed mb-4">Aloqa</h4>
+        <address class="not-italic text-sm leading-relaxed text-secondary-fixed-dim mb-3">100047, Toshkent shahri,<br/>Mirzo Ulug'bek tumani,<br/>Buyuk turon ko'chasi, 41</address>
+        <p class="text-sm text-secondary-fixed-dim">
+          <a href="tel:+998712000000" class="hover:text-white transition block">+998 71 200 00 00</a>
+          <a href="mailto:info@markaz.uz" class="hover:text-white transition block">info@markaz.uz</a>
+        </p>
+        <div class="mt-5">
+          <p class="text-xs text-secondary-fixed-dim mb-2">Newsletter obunasi:</p>
+          <form onsubmit="event.preventDefault(); alert('Obuna bo\'lganingiz uchun rahmat!')" class="flex gap-2">
+            <input type="email" required placeholder="email@misol.uz" class="flex-1 bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-secondary-fixed-dim/60 focus:outline-none focus:border-tertiary-fixed"/>
+            <button type="submit" class="bg-tertiary-fixed text-primary px-3 py-2 rounded font-semibold text-sm hover:bg-white transition"><span class="material-symbols-outlined text-base align-middle">send</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+      <p class="text-xs text-secondary-fixed-dim">© 2026 — Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi. Barcha huquqlar himoyalangan.</p>
+      <div class="flex gap-5 text-xs">
+        <a href="#" class="text-secondary-fixed-dim hover:text-white transition">Maxfiylik siyosati</a>
+        <a href="#" class="text-secondary-fixed-dim hover:text-white transition">Foydalanish shartlari</a>
+        <a href="#" class="text-secondary-fixed-dim hover:text-white transition">Sayt xaritasi</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Search Modal -->
+<div id="searchModal" class="fixed inset-0 z-[100] hidden modal-backdrop bg-on-background/60 items-center justify-center p-4">
+  <div class="bg-surface w-full max-w-2xl rounded-xl shadow-2xl">
+    <div class="p-6 border-b border-outline-variant">
+      <div class="flex items-center justify-between mb-5">
+        <h3 class="font-bold text-on-surface">Qidirish</h3>
+        <button id="closeSearch" class="w-8 h-8 rounded-full hover:bg-surface-container-low flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant">close</span></button>
+      </div>
+      <div class="flex items-center gap-3 border-2 border-outline-variant rounded-lg px-4 py-3 focus-within:border-primary transition">
+        <span class="material-symbols-outlined text-on-surface-variant">search</span>
+        <input id="searchInput" type="text" class="flex-1 bg-transparent outline-none text-on-surface text-[15px]" placeholder="Tadqiqot, yangilik, ekspert..." autocomplete="off"/>
+      </div>
+      <div id="searchResults" class="mt-5 space-y-2 max-h-80 overflow-y-auto"></div>
+    </div>
+    <div class="px-6 py-3 bg-surface-container-low rounded-b-xl flex items-center justify-between text-xs text-on-surface-variant">
+      <span>ESC chiqish uchun</span>
+      <span id="resultCount">0 natija</span>
+    </div>
+  </div>
+</div>
+
+<!-- Admin Panel Modal -->
+<div id="adminModal" class="fixed inset-0 z-[100] hidden modal-backdrop bg-on-background/80 overflow-y-auto p-4">
+  <div class="bg-surface max-w-6xl mx-auto my-6 rounded-xl shadow-2xl overflow-hidden">
+    <header class="bg-primary text-on-primary p-5 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-full bg-white/15 flex items-center justify-center"><span class="material-symbols-outlined">admin_panel_settings</span></div>
+        <div><div class="font-bold text-[18px] leading-tight">CMS — Admin panel</div><div class="text-xs text-secondary-fixed-dim">Markaz boshqaruv tizimi · v2.4</div></div>
+      </div>
+      <button id="closeAdmin" class="w-10 h-10 rounded-full hover:bg-white/15 flex items-center justify-center transition"><span class="material-symbols-outlined">close</span></button>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[240px_1fr] min-h-[600px]">
+      <aside class="bg-surface-container-low border-r border-outline-variant p-4">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-3 px-3">Bo'limlar</div>
+        <nav class="space-y-1">
+          <button data-admin-tab="dashboard" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 bg-primary text-white text-sm font-medium"><span class="material-symbols-outlined text-lg">dashboard</span><span>Boshqaruv paneli</span></button>
+          <button data-admin-tab="news" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 hover:bg-surface text-sm text-on-surface-variant transition"><span class="material-symbols-outlined text-lg">article</span><span>Yangiliklar</span></button>
+          <button data-admin-tab="research" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 hover:bg-surface text-sm text-on-surface-variant transition"><span class="material-symbols-outlined text-lg">menu_book</span><span>Tadqiqotlar</span></button>
+          <button data-admin-tab="experts" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 hover:bg-surface text-sm text-on-surface-variant transition"><span class="material-symbols-outlined text-lg">groups</span><span>Ekspertlar</span></button>
+          <button data-admin-tab="messages" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 hover:bg-surface text-sm text-on-surface-variant transition"><span class="material-symbols-outlined text-lg">mark_email_unread</span><span class="flex-1">Murojaatlar</span><span class="bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded-full">12</span></button>
+          <button data-admin-tab="media" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 hover:bg-surface text-sm text-on-surface-variant transition"><span class="material-symbols-outlined text-lg">perm_media</span><span>Media kutubxona</span></button>
+          <button data-admin-tab="settings" class="admin-tab w-full text-left px-3 py-2.5 rounded flex items-center gap-3 hover:bg-surface text-sm text-on-surface-variant transition"><span class="material-symbols-outlined text-lg">settings</span><span>Sozlamalar</span></button>
+        </nav>
+        <div class="mt-6 p-3 bg-surface rounded-lg border border-outline-variant">
+          <div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-xs font-semibold text-on-surface">Tizim faol</span></div>
+          <p class="text-[11px] text-on-surface-variant">Server: Online · 99.9%</p>
+        </div>
+      </aside>
+
+      <main class="p-6 lg:p-8 bg-background">
+        <div id="adminContent-dashboard" class="admin-content">
+          <div class="flex items-end justify-between mb-6">
+            <div><span class="text-xs uppercase tracking-widest text-primary font-bold">Boshqaruv paneli</span><h2 class="text-[26px] font-bold text-on-surface mt-1">Salom, Administrator</h2></div>
+            <div class="text-xs text-on-surface-variant text-right"><div>25 May 2026 · Dushanba</div><div class="text-on-surface font-semibold mt-0.5">14:32</div></div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="bg-surface rounded-lg p-4 border border-outline-variant"><div class="flex items-center justify-between mb-3"><span class="text-xs uppercase tracking-widest text-on-surface-variant">Yangiliklar</span><span class="material-symbols-outlined text-primary text-base">article</span></div><div class="text-[28px] font-bold text-on-surface">247</div><div class="text-[11px] text-green-700 font-semibold mt-1">↗ +8 bu hafta</div></div>
+            <div class="bg-surface rounded-lg p-4 border border-outline-variant"><div class="flex items-center justify-between mb-3"><span class="text-xs uppercase tracking-widest text-on-surface-variant">Tadqiqotlar</span><span class="material-symbols-outlined text-primary text-base">menu_book</span></div><div class="text-[28px] font-bold text-on-surface">156</div><div class="text-[11px] text-green-700 font-semibold mt-1">↗ +3 bu oy</div></div>
+            <div class="bg-surface rounded-lg p-4 border border-outline-variant"><div class="flex items-center justify-between mb-3"><span class="text-xs uppercase tracking-widest text-on-surface-variant">Murojaatlar</span><span class="material-symbols-outlined text-error text-base">priority_high</span></div><div class="text-[28px] font-bold text-error">12</div><div class="text-[11px] text-error font-semibold mt-1">⚠ javob kutmoqda</div></div>
+            <div class="bg-surface rounded-lg p-4 border border-outline-variant"><div class="flex items-center justify-between mb-3"><span class="text-xs uppercase tracking-widest text-on-surface-variant">Tashriflar</span><span class="material-symbols-outlined text-primary text-base">visibility</span></div><div class="text-[28px] font-bold text-on-surface">4,892</div><div class="text-[11px] text-green-700 font-semibold mt-1">↗ +12.4% bugun</div></div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-5">
+            <div class="bg-surface border border-outline-variant rounded-lg overflow-hidden">
+              <div class="p-4 border-b border-outline-variant flex items-center justify-between"><h3 class="font-semibold text-on-surface">So'nggi murojaatlar</h3><button class="text-xs text-primary font-semibold hover:underline">Barchasi →</button></div>
+              <div class="divide-y divide-outline-variant">
+                <div class="p-4 flex items-start gap-3 hover:bg-surface-container-low transition cursor-pointer"><div class="w-9 h-9 rounded-full bg-error/10 text-error flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-base">priority_high</span></div><div class="flex-1 min-w-0"><div class="text-sm font-semibold text-on-surface mb-0.5 truncate">Telekom narxining oshirilishi</div><div class="text-xs text-on-surface-variant">A. Karimov · 25.05.2026</div></div></div>
+                <div class="p-4 flex items-start gap-3 hover:bg-surface-container-low transition cursor-pointer"><div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-base text-on-surface-variant">mail</span></div><div class="flex-1 min-w-0"><div class="text-sm font-semibold text-on-surface mb-0.5 truncate">Onlayn do'kon shikoyati</div><div class="text-xs text-on-surface-variant">M. Salimova · 24.05.2026</div></div></div>
+                <div class="p-4 flex items-start gap-3 hover:bg-surface-container-low transition cursor-pointer"><div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-base text-on-surface-variant">mail</span></div><div class="flex-1 min-w-0"><div class="text-sm font-semibold text-on-surface mb-0.5 truncate">Bank komissiyasi haqida</div><div class="text-xs text-on-surface-variant">D. Tursunov · 23.05.2026</div></div></div>
+              </div>
+            </div>
+            <div class="bg-surface border border-outline-variant rounded-lg overflow-hidden">
+              <div class="p-4 border-b border-outline-variant"><h3 class="font-semibold text-on-surface">Tezkor harakatlar</h3></div>
+              <div class="grid grid-cols-2 gap-px bg-outline-variant">
+                <button class="bg-surface p-5 hover:bg-primary hover:text-white transition group flex flex-col items-start gap-2 text-left"><span class="material-symbols-outlined text-2xl text-primary group-hover:text-white">add_circle</span><div><div class="text-sm font-semibold">Yangi yangilik</div><div class="text-[11px] text-on-surface-variant group-hover:text-white/70 mt-0.5">News post yaratish</div></div></button>
+                <button class="bg-surface p-5 hover:bg-primary hover:text-white transition group flex flex-col items-start gap-2 text-left"><span class="material-symbols-outlined text-2xl text-primary group-hover:text-white">upload_file</span><div><div class="text-sm font-semibold">Hisobot yuklash</div><div class="text-[11px] text-on-surface-variant group-hover:text-white/70 mt-0.5">PDF tadqiqot</div></div></button>
+                <button class="bg-surface p-5 hover:bg-primary hover:text-white transition group flex flex-col items-start gap-2 text-left"><span class="material-symbols-outlined text-2xl text-primary group-hover:text-white">person_add</span><div><div class="text-sm font-semibold">Ekspert qo'shish</div><div class="text-[11px] text-on-surface-variant group-hover:text-white/70 mt-0.5">Jamoa profili</div></div></button>
+                <button class="bg-surface p-5 hover:bg-primary hover:text-white transition group flex flex-col items-start gap-2 text-left"><span class="material-symbols-outlined text-2xl text-primary group-hover:text-white">edit_calendar</span><div><div class="text-sm font-semibold">Tadbir qo'shish</div><div class="text-[11px] text-on-surface-variant group-hover:text-white/70 mt-0.5">E'lon / kalendar</div></div></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="adminContent-news" class="admin-content hidden">
+          <div class="flex items-end justify-between mb-6"><div><span class="text-xs uppercase tracking-widest text-primary font-bold">Kontent</span><h2 class="text-[26px] font-bold text-on-surface mt-1">Yangiliklar</h2></div><button class="bg-primary text-white px-4 py-2.5 rounded font-semibold text-sm hover:bg-primary/90 transition flex items-center gap-2"><span class="material-symbols-outlined text-base">add</span>Yangi yaratish</button></div>
+          <div class="bg-surface border border-outline-variant rounded-lg overflow-hidden">
+            <table class="w-full text-sm">
+              <thead class="bg-surface-container-low border-b border-outline-variant"><tr class="text-xs uppercase tracking-widest text-on-surface-variant"><th class="text-left p-3 font-semibold">№</th><th class="text-left p-3 font-semibold">Sarlavha</th><th class="text-left p-3 font-semibold hidden md:table-cell">Toifa</th><th class="text-left p-3 font-semibold hidden md:table-cell">Sana</th><th class="text-left p-3 font-semibold">Holat</th><th class="text-right p-3 font-semibold">Amal</th></tr></thead>
+              <tbody class="divide-y divide-outline-variant">
+                <tr class="hover:bg-surface-container-low transition"><td class="p-3 text-on-surface-variant">247</td><td class="p-3 font-medium text-on-surface">OECD bilan hamkorlik dasturi imzolandi</td><td class="p-3 hidden md:table-cell text-on-surface-variant">Yangilik</td><td class="p-3 hidden md:table-cell text-on-surface-variant">25.05.2026</td><td class="p-3"><span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase">Nashr</span></td><td class="p-3 text-right"><button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-base">edit</span></button><button class="text-on-surface-variant hover:text-error p-1"><span class="material-symbols-outlined text-base">delete</span></button></td></tr>
+                <tr class="hover:bg-surface-container-low transition"><td class="p-3 text-on-surface-variant">246</td><td class="p-3 font-medium text-on-surface">Iste'molchilar huquqlari seminari</td><td class="p-3 hidden md:table-cell text-on-surface-variant">Tadbir</td><td class="p-3 hidden md:table-cell text-on-surface-variant">24.05.2026</td><td class="p-3"><span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase">Nashr</span></td><td class="p-3 text-right"><button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-base">edit</span></button><button class="text-on-surface-variant hover:text-error p-1"><span class="material-symbols-outlined text-base">delete</span></button></td></tr>
+                <tr class="hover:bg-surface-container-low transition"><td class="p-3 text-on-surface-variant">245</td><td class="p-3 font-medium text-on-surface">Bozor tahlillari: 2026 Q1 yakunlari</td><td class="p-3 hidden md:table-cell text-on-surface-variant">Nashr</td><td class="p-3 hidden md:table-cell text-on-surface-variant">22.05.2026</td><td class="p-3"><span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded uppercase">Qoralama</span></td><td class="p-3 text-right"><button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-base">edit</span></button><button class="text-on-surface-variant hover:text-error p-1"><span class="material-symbols-outlined text-base">delete</span></button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="adminContent-research" class="admin-content hidden">
+          <div class="flex items-end justify-between mb-6"><div><span class="text-xs uppercase tracking-widest text-primary font-bold">Arxiv</span><h2 class="text-[26px] font-bold text-on-surface mt-1">156 ta tadqiqot</h2></div><button class="bg-primary text-white px-4 py-2.5 rounded font-semibold text-sm hover:bg-primary/90 transition flex items-center gap-2"><span class="material-symbols-outlined text-base">upload</span>PDF yuklash</button></div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-surface border border-outline-variant rounded-lg p-5"><div class="flex items-center gap-2 mb-3"><span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">№47</span><span class="text-xs text-on-surface-variant">25.03.2026 · 84 sahifa</span></div><h4 class="font-semibold text-on-surface mb-3 leading-snug">Raqamli platformalar va bozor kuchi</h4><div class="flex items-center gap-2"><button class="text-xs px-3 py-1.5 border border-outline-variant rounded hover:bg-primary hover:text-white hover:border-primary transition">Tahrirlash</button><button class="text-xs px-3 py-1.5 border border-outline-variant rounded hover:bg-primary hover:text-white hover:border-primary transition">Ko'rish</button></div></div>
+            <div class="bg-surface border border-outline-variant rounded-lg p-5"><div class="flex items-center gap-2 mb-3"><span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">№46</span><span class="text-xs text-on-surface-variant">18.03.2026 · 32 sahifa</span></div><h4 class="font-semibold text-on-surface mb-3 leading-snug">SI va algoritmik narxlash tavsiyalari</h4><div class="flex items-center gap-2"><button class="text-xs px-3 py-1.5 border border-outline-variant rounded hover:bg-primary hover:text-white hover:border-primary transition">Tahrirlash</button><button class="text-xs px-3 py-1.5 border border-outline-variant rounded hover:bg-primary hover:text-white hover:border-primary transition">Ko'rish</button></div></div>
+          </div>
+        </div>
+
+        <div id="adminContent-experts" class="admin-content hidden"><span class="text-xs uppercase tracking-widest text-primary font-bold">Jamoa</span><h2 class="text-[26px] font-bold text-on-surface mt-1 mb-6">45 ta ekspert</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"><div class="bg-surface border border-outline-variant rounded-lg p-5 flex gap-4"><div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">person</span></div><div><div class="font-semibold text-on-surface">D. Olimov</div><div class="text-xs text-on-surface-variant mb-2">Bosh tadqiqotchi</div><div class="text-[11px] text-primary">Antimonopol siyosat</div></div></div><div class="bg-surface border border-outline-variant rounded-lg p-5 flex gap-4"><div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">person</span></div><div><div class="font-semibold text-on-surface">N. Karimova</div><div class="text-xs text-on-surface-variant mb-2">Etakchi ekspert</div><div class="text-[11px] text-primary">Iste'molchi himoyasi</div></div></div><div class="bg-surface border border-outline-variant rounded-lg p-5 flex gap-4"><div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">person</span></div><div><div class="font-semibold text-on-surface">A. Yusupov</div><div class="text-xs text-on-surface-variant mb-2">Katta tahlilchi</div><div class="text-[11px] text-primary">Raqamli iqtisodiyot</div></div></div></div></div>
+
+        <div id="adminContent-messages" class="admin-content hidden"><span class="text-xs uppercase tracking-widest text-primary font-bold">Kelib tushgan</span><h2 class="text-[26px] font-bold text-on-surface mt-1 mb-6">Murojaatlar (12 ta yangi)</h2><div class="bg-surface border border-outline-variant rounded-lg divide-y divide-outline-variant"><div class="p-4 hover:bg-surface-container-low cursor-pointer flex items-start gap-4"><input type="checkbox" class="mt-1"/><div class="flex-1"><div class="flex items-center gap-2 mb-1"><span class="font-semibold text-on-surface">A. Karimov</span><span class="bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">Yangi</span></div><div class="text-sm text-on-surface mb-1">Telekommunikatsiya xizmatlari narxining oshirilishi</div><div class="text-xs text-on-surface-variant">karimov@example.uz · 25.05.2026</div></div></div><div class="p-4 hover:bg-surface-container-low cursor-pointer flex items-start gap-4"><input type="checkbox" class="mt-1"/><div class="flex-1"><div class="flex items-center gap-2 mb-1"><span class="font-semibold text-on-surface">M. Salimova</span><span class="bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">Yangi</span></div><div class="text-sm text-on-surface mb-1">Internet do'koni — iste'molchi huquqlari</div><div class="text-xs text-on-surface-variant">salimova@example.uz · 24.05.2026</div></div></div></div></div>
+
+        <div id="adminContent-media" class="admin-content hidden"><div class="flex items-end justify-between mb-6"><div><span class="text-xs uppercase tracking-widest text-primary font-bold">Fayllar</span><h2 class="text-[26px] font-bold text-on-surface mt-1">Media kutubxona</h2></div><button class="bg-primary text-white px-4 py-2.5 rounded font-semibold text-sm hover:bg-primary/90 transition flex items-center gap-2"><span class="material-symbols-outlined text-base">cloud_upload</span>Fayl yuklash</button></div><div class="grid grid-cols-2 md:grid-cols-4 gap-3"><div class="bg-surface border border-outline-variant rounded-lg p-3 hover:shadow-md transition cursor-pointer"><div class="aspect-square bg-primary/5 rounded mb-2 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-4xl">image</span></div><div class="text-xs text-on-surface truncate">hero-1.jpg</div><div class="text-[10px] text-on-surface-variant">2.4 MB</div></div><div class="bg-surface border border-outline-variant rounded-lg p-3 hover:shadow-md transition cursor-pointer"><div class="aspect-square bg-primary/5 rounded mb-2 flex items-center justify-center"><span class="material-symbols-outlined text-error text-4xl">picture_as_pdf</span></div><div class="text-xs text-on-surface truncate">report-47.pdf</div><div class="text-[10px] text-on-surface-variant">2.4 MB</div></div><div class="bg-surface border border-outline-variant rounded-lg p-3 hover:shadow-md transition cursor-pointer"><div class="aspect-square bg-primary/5 rounded mb-2 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-4xl">videocam</span></div><div class="text-xs text-on-surface truncate">seminar.mp4</div><div class="text-[10px] text-on-surface-variant">124 MB</div></div><div class="bg-surface border border-outline-variant rounded-lg p-3 hover:shadow-md transition cursor-pointer"><div class="aspect-square bg-primary/5 rounded mb-2 flex items-center justify-center"><span class="material-symbols-outlined text-green-700 text-4xl">description</span></div><div class="text-xs text-on-surface truncate">data.xlsx</div><div class="text-[10px] text-on-surface-variant">340 KB</div></div></div></div>
+
+        <div id="adminContent-settings" class="admin-content hidden"><span class="text-xs uppercase tracking-widest text-primary font-bold">Konfiguratsiya</span><h2 class="text-[26px] font-bold text-on-surface mt-1 mb-6">Tizim sozlamalari</h2><div class="space-y-4"><div class="bg-surface border border-outline-variant rounded-lg p-5"><h3 class="font-semibold text-on-surface mb-3">Sayt sozlamalari</h3><div class="grid md:grid-cols-2 gap-4"><div><label class="text-xs text-on-surface-variant block mb-1">Sayt nomi</label><input type="text" value="Raqobat siyosati markazi" class="w-full px-3 py-2 border border-outline-variant rounded text-sm bg-surface outline-none focus:border-primary"/></div><div><label class="text-xs text-on-surface-variant block mb-1">Asosiy email</label><input type="email" value="info@markaz.uz" class="w-full px-3 py-2 border border-outline-variant rounded text-sm bg-surface outline-none focus:border-primary"/></div></div><button class="mt-4 bg-primary text-white px-4 py-2 rounded text-sm font-semibold hover:bg-primary/90 transition">Saqlash</button></div></div></div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Hero slider
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  let currentSlide = 0;
+  function showSlide(i) {
+    slides.forEach((s, idx) => {
+      s.style.opacity = idx === i ? '1' : '0';
+      s.style.pointerEvents = idx === i ? 'auto' : 'none';
+    });
+    dots.forEach((d, idx) => {
+      if (idx === i) { d.classList.remove('bg-white/40'); d.classList.add('bg-white'); }
+      else { d.classList.add('bg-white/40'); d.classList.remove('bg-white'); }
+    });
+    currentSlide = i;
+  }
+  dots.forEach((d, i) => d.addEventListener('click', () => showSlide(i)));
+  setInterval(() => showSlide((currentSlide + 1) % slides.length), 6000);
+
+  // Counters
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const start = performance.now();
+    function frame(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString('uz');
+      if (progress < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); observer.unobserve(e.target); } });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.stat-num').forEach(el => observer.observe(el));
+
+  // Font size
+  let currentSize = 16;
+  function applyFontSize() { document.documentElement.style.fontSize = currentSize + 'px'; }
+  document.getElementById('fontInc')?.addEventListener('click', () => { if (currentSize < 22) { currentSize += 2; applyFontSize(); } });
+  document.getElementById('fontDec')?.addEventListener('click', () => { if (currentSize > 12) { currentSize -= 2; applyFontSize(); } });
+  document.getElementById('fontReset')?.addEventListener('click', () => { currentSize = 16; applyFontSize(); });
+
+  // Language
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.lang-btn').forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('hover:bg-primary/10'); });
+      btn.classList.add('bg-primary', 'text-white');
+      btn.classList.remove('hover:bg-primary/10');
+    });
+  });
+
+  // About tabs
+  document.querySelectorAll('.about-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.about-tab').forEach(t => { t.classList.remove('text-primary', 'border-b-2', 'border-primary'); t.classList.add('text-on-surface-variant'); });
+      tab.classList.add('text-primary', 'border-b-2', 'border-primary');
+      tab.classList.remove('text-on-surface-variant');
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.about-content').forEach(c => c.classList.add('hidden'));
+      document.getElementById('content-' + target).classList.remove('hidden');
+    });
+  });
+
+  // Search
+  const searchBtn = document.getElementById('searchBtn');
+  const searchModal = document.getElementById('searchModal');
+  const closeSearch = document.getElementById('closeSearch');
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const resultCount = document.getElementById('resultCount');
+  const searchIndex = [
+    { title: 'Raqamli platformalar va bozor kuchi', type: 'Tahliliy hisobot', date: '25.03.2026', icon: 'menu_book' },
+    { title: 'SI va algoritmik narxlash tavsiyalari', type: 'Brifing', date: '18.03.2026', icon: 'menu_book' },
+    { title: 'Telekommunikatsiya bozori HHI dinamikasi', type: 'Tahlil', date: '11.03.2026', icon: 'monitoring' },
+    { title: 'Iste\'molchi shikoyatlari xaritasi 2025', type: 'Hisobot', date: '02.03.2026', icon: 'menu_book' },
+    { title: 'D. Olimov — Bosh tadqiqotchi', type: 'Ekspert', date: 'Antimonopol siyosat', icon: 'person' },
+    { title: 'N. Karimova — Etakchi ekspert', type: 'Ekspert', date: 'Iste\'molchi himoyasi', icon: 'person' },
+    { title: 'OECD bilan hamkorlik dasturi', type: 'Yangilik', date: '25.05.2026', icon: 'article' },
+    { title: 'Xalqaro konferentsiya 14.06.2026', type: 'Tadbir', date: '18.05.2026', icon: 'event' },
+  ];
+  function openSearch() { searchModal.classList.remove('hidden'); searchModal.classList.add('flex'); setTimeout(() => searchInput.focus(), 50); renderResults(''); }
+  function closeSearchModal() { searchModal.classList.add('hidden'); searchModal.classList.remove('flex'); searchInput.value = ''; }
+  function renderResults(q) {
+    const query = q.toLowerCase().trim();
+    const results = query ? searchIndex.filter(r => r.title.toLowerCase().includes(query) || r.type.toLowerCase().includes(query)) : searchIndex.slice(0, 6);
+    if (results.length === 0) {
+      searchResults.innerHTML = `<div class="text-center py-8 text-on-surface-variant">Hech narsa topilmadi</div>`;
+    } else {
+      searchResults.innerHTML = results.map(r => `<a href="#" class="block p-3 rounded-lg border border-outline-variant hover:border-primary hover:bg-primary/5 transition group"><div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl flex-shrink-0">${r.icon}</span><div class="flex-1 min-w-0"><div class="font-semibold text-on-surface text-sm group-hover:text-primary transition truncate mb-1">${r.title}</div><div class="flex items-center gap-2 text-xs"><span class="bg-primary/10 text-primary px-2 py-0.5 rounded font-semibold">${r.type}</span><span class="text-on-surface-variant">${r.date}</span></div></div></div></a>`).join('');
+    }
+    resultCount.textContent = `${results.length} natija`;
+  }
+  searchBtn?.addEventListener('click', openSearch);
+  closeSearch?.addEventListener('click', closeSearchModal);
+  searchInput?.addEventListener('input', e => renderResults(e.target.value));
+  searchModal?.addEventListener('click', e => { if (e.target === searchModal) closeSearchModal(); });
+
+  // Admin panel
+  const adminBtn = document.getElementById('adminBtn');
+  const adminModal = document.getElementById('adminModal');
+  const closeAdmin = document.getElementById('closeAdmin');
+  function openAdmin() { adminModal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+  function closeAdminModal() { adminModal.classList.add('hidden'); document.body.style.overflow = ''; }
+  adminBtn?.addEventListener('click', openAdmin);
+  closeAdmin?.addEventListener('click', closeAdminModal);
+  adminModal?.addEventListener('click', e => { if (e.target === adminModal) closeAdminModal(); });
+  document.querySelectorAll('.admin-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.admin-tab').forEach(t => { t.classList.remove('bg-primary', 'text-white'); t.classList.add('hover:bg-surface', 'text-on-surface-variant'); });
+      tab.classList.add('bg-primary', 'text-white');
+      tab.classList.remove('hover:bg-surface', 'text-on-surface-variant');
+      const target = tab.dataset.adminTab;
+      document.querySelectorAll('.admin-content').forEach(c => c.classList.add('hidden'));
+      document.getElementById('adminContent-' + target).classList.remove('hidden');
+    });
+  });
+
+  // ESC closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeSearchModal(); closeAdminModal(); }
+    if (e.key === '/' && document.activeElement !== searchInput) { e.preventDefault(); openSearch(); }
+  });
+</script>
+</body>
+</html>
