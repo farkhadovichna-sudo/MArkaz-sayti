@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Raqobat siyosati va iste'molchilar huquqlari markazi — Tadqiqotlar va nashrlar arxivi"/>
+<title>Tadqiqotlar — Markaz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#002a78","primary-fixed": "#dbe1ff","on-primary-fixed": "#00174b","on-primary-container": "#7a95e8","on-tertiary-container": "#00a7c9","tertiary-container": "#003643","tertiary-fixed": "#b4ebff","primary-container": "#002a78","on-primary-fixed-variant": "#23428f","secondary": "#595f67","surface": "#f9f9fc","surface-container-low": "#f3f3f6","surface-container": "#eeeef0","surface-container-lowest": "#ffffff","surface-container-high": "#e8e8ea","surface-variant": "#e2e2e5","secondary-fixed": "#dee3ed","secondary-fixed-dim": "#c1c7d0","on-background": "#1a1c1e","on-surface": "#1a1c1e","on-surface-variant": "#444651","on-primary": "#ffffff","outline": "#747682","outline-variant": "#c4c6d3","background": "#f9f9fc","error": "#ba1a1a","on-error": "#ffffff","tertiary": "#001f28",
+        },
+        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        spacing: { "margin-mobile": "16px", "margin-desktop": "64px" },
+        fontFamily: { "sans": ["Montserrat", "system-ui", "sans-serif"] },
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Montserrat', sans-serif; }
+  .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+</style>
+</head>
+<body class="bg-background text-on-background antialiased">
+
+<!-- Top Info Bar -->
+<div class="bg-primary text-on-primary w-full z-[60] relative">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex items-center justify-between h-9 text-[12px]">
+      <div class="hidden md:flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-secondary-fixed-dim"><span class="material-symbols-outlined text-[14px]">schedule</span>Du–Ju: 09:00–18:00</span>
+        <span class="flex items-center gap-1.5 text-secondary-fixed-dim"><span class="material-symbols-outlined text-[14px]">call</span><a href="tel:+998712000000" class="hover:text-white transition">+998 71 200 00 00</a></span>
+        <span class="flex items-center gap-1.5 text-secondary-fixed-dim"><span class="material-symbols-outlined text-[14px]">mail</span><a href="mailto:info@markaz.uz" class="hover:text-white transition">info@markaz.uz</a></span>
+      </div>
+      <div class="flex items-center gap-1">
+        <div class="flex items-center text-[11px] font-semibold rounded overflow-hidden border border-white/20">
+          <button data-lang="UZ" class="lang-btn px-2 py-1 bg-white/20 text-white">UZ</button>
+          <button data-lang="RU" class="lang-btn px-2 py-1 hover:bg-white/10 text-white/70 transition">RU</button>
+          <button data-lang="EN" class="lang-btn px-2 py-1 hover:bg-white/10 text-white/70 transition">EN</button>
+        </div>
+        <div class="hidden sm:flex items-center gap-0.5 ml-2 border border-white/20 rounded overflow-hidden">
+          <button id="fontDec" class="w-6 h-6 flex items-center justify-center text-white/70 hover:bg-white/10 transition text-[10px] font-bold">A-</button>
+          <button id="fontReset" class="w-6 h-6 flex items-center justify-center text-white hover:bg-white/10 transition text-[11px] font-bold border-x border-white/20">A</button>
+          <button id="fontInc" class="w-6 h-6 flex items-center justify-center text-white/70 hover:bg-white/10 transition text-[12px] font-bold">A+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Top Navigation Bar -->
+<div class="bg-on-primary-fixed w-full z-[55] relative border-b border-white/10">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="hidden md:flex items-center gap-0 h-10 text-[13px] font-medium">
+      <a href="index.html" class="text-white/80 hover:bg-white/10 hover:text-white px-3 h-full flex items-center transition-colors border-b-2 border-transparent">Bosh sahifa</a>
+      <a href="markaz-haqida.html" class="text-white/80 hover:bg-white/10 hover:text-white px-3 h-full flex items-center transition-colors border-b-2 border-transparent">Markaz haqida</a>
+      <a href="yangiliklar.html" class="text-white/80 hover:bg-white/10 hover:text-white px-3 h-full flex items-center transition-colors border-b-2 border-transparent">Yangiliklar</a>
+      <a href="tadqiqotlar.html" class="text-white hover:bg-white/10 px-3 h-full flex items-center transition-colors border-b-2 border-tertiary-fixed">Tadqiqotlar</a>
+      <a href="axborot-xizmati.html" class="text-white/80 hover:bg-white/10 hover:text-white px-3 h-full flex items-center transition-colors border-b-2 border-transparent">Axborot xizmati</a>
+      <a href="boglanish.html" class="text-white/80 hover:bg-white/10 hover:text-white px-3 h-full flex items-center transition-colors border-b-2 border-transparent">Bog'lanish</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Nav -->
+<nav class="bg-surface border-b border-outline-variant shadow-sm w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 8 L4 22 M4 8 L14 14 L24 8 M24 8 L24 22" stroke="#ffffff" stroke-width="2.2" stroke-linecap="square" fill="none"/><circle cx="14" cy="14" r="1.8" fill="#dbe1ff"/></svg>
+      </div>
+      <span class="text-[16px] leading-tight font-bold text-primary hidden md:block max-w-[320px]">Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi</span>
+    </a>
+    <div class="flex items-center gap-2">
+      <button id="searchBtn" class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-primary transition-colors text-[22px]" title="Qidirish">search</button>
+      <button class="hidden md:inline-flex text-[13px] font-semibold bg-primary text-on-primary hover:bg-primary/90 px-4 py-2 rounded transition-colors items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">login</span>Kirish</button>
+      <button id="mobileMenuBtn" class="lg:hidden material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-primary transition-colors text-[26px] ml-1" title="Menyu">menu</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 z-[70] hidden"></div>
+<aside id="mobileMenuSidebar" class="fixed top-0 right-0 h-full w-[300px] bg-surface shadow-2xl z-[80] transform translate-x-full transition-transform duration-300 overflow-y-auto">
+  <div class="p-5 border-b border-outline-variant flex items-center justify-between">
+    <span class="text-[15px] font-bold text-primary">Menyu</span>
+    <button id="mobileMenuClose" class="w-9 h-9 rounded-full hover:bg-surface-container-low flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant">close</span></button>
+  </div>
+  <nav class="p-4 space-y-1">
+    <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-[14px] transition"><span class="material-symbols-outlined text-lg">home</span>Bosh sahifa</a>
+    <a href="markaz-haqida.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-[14px] transition"><span class="material-symbols-outlined text-lg">info</span>Markaz haqida</a>
+    <a href="yangiliklar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-[14px] transition"><span class="material-symbols-outlined text-lg">newspaper</span>Yangiliklar</a>
+    <a href="tadqiqotlar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-semibold text-[14px]"><span class="material-symbols-outlined text-lg">menu_book</span>Tadqiqotlar</a>
+    <a href="axborot-xizmati.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-[14px] transition"><span class="material-symbols-outlined text-lg">perm_media</span>Axborot xizmati</a>
+    <a href="boglanish.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-[14px] transition"><span class="material-symbols-outlined text-lg">contact_mail</span>Bog'lanish</a>
+  </nav>
+</aside>
+
+<!-- Breadcrumb -->
+<div class="bg-surface-container-low border-b border-outline-variant/50">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-3">
+    <div class="flex items-center gap-2 text-[13px] text-on-surface-variant">
+      <a href="index.html" class="hover:text-primary transition">Bosh sahifa</a>
+      <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+      <span class="text-primary font-semibold">Tadqiqotlar</span>
+    </div>
+  </div>
+</div>
+
+<!-- Page Header -->
+<section class="bg-primary text-on-primary py-12">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <h1 class="text-[36px] md:text-[44px] font-bold mb-3">Tadqiqotlar va nashrlar</h1>
+    <p class="text-secondary-fixed-dim max-w-2xl text-[16px]">Markaz tomonidan e'lon qilingan ilmiy-amaliy hisobotlar, brifinglar va tahliliy materiallar arxivi</p>
+  </div>
+</section>
+
+<!-- Featured Research -->
+<section class="w-full bg-surface py-12">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+      <div class="aspect-[16/10] lg:aspect-auto overflow-hidden bg-primary/5">
+        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80" alt=""/>
+      </div>
+      <div class="p-8 flex flex-col justify-center">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-primary text-white text-[11px] font-bold px-3 py-1 rounded uppercase tracking-wider">Etakchi nashr</span>
+          <span class="text-xs text-on-surface-variant">№47 · 84 sahifa</span>
+        </div>
+        <h2 class="text-[26px] font-bold text-on-surface leading-tight mb-3">Raqamli platformalar va bozor kuchi: O'zbekiston konteksti</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Onlayn marketpleyslar, kuryer ilovalari va raqamli moliya xizmatlaridagi raqobat dinamikasini empirik baholash. Hisobotda bozor kontsentratsiyasi, narx shakllanishi va iste'molchi tanlovining cheklanishi masalalari tahlil qilinadi.</p>
+        <div class="flex flex-wrap items-center gap-3">
+          <button class="bg-primary text-white hover:bg-primary/90 px-5 py-2.5 rounded font-semibold text-[14px] transition-colors flex items-center gap-2"><span class="material-symbols-outlined text-base">download</span>PDF yuklash</button>
+          <button class="border border-outline-variant text-on-surface-variant hover:bg-surface-container-low px-5 py-2.5 rounded font-semibold text-[14px] transition-colors flex items-center gap-2"><span class="material-symbols-outlined text-base">visibility</span>Onlayn o'qish</button>
+          <span class="text-xs text-on-surface-variant ml-auto">25.03.2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filters -->
+<section class="bg-surface border-y border-outline-variant">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <button class="research-filter bg-primary text-white text-[13px] font-semibold px-4 py-2 rounded transition-colors" data-filter="all">Barchasi</button>
+      <button class="research-filter bg-surface-container-low text-on-surface-variant text-[13px] font-semibold px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors" data-filter="hisobot">Hisobot</button>
+      <button class="research-filter bg-surface-container-low text-on-surface-variant text-[13px] font-semibold px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors" data-filter="brifing">Brifing</button>
+      <button class="research-filter bg-surface-container-low text-on-surface-variant text-[13px] font-semibold px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors" data-filter="tahlil">Tahlil</button>
+      <button class="research-filter bg-surface-container-low text-on-surface-variant text-[13px] font-semibold px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors" data-filter="metodologiya">Metodologiya</button>
+    </div>
+  </div>
+</section>
+
+<!-- Research Grid -->
+<section class="w-full bg-surface-container-low py-12">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="researchGrid">
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="hisobot">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-primary/10 text-primary text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Hisobot</span><span class="text-xs text-on-surface-variant">№47 · 84 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Raqamli platformalar va bozor kuchi: O'zbekiston konteksti</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Onlayn marketpleyslar, kuryer ilovalari va raqamli moliya xizmatlaridagi raqobat dinamikasini empirik baholash.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">25.03.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="brifing">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-tertiary-container/20 text-tertiary-container text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Brifing</span><span class="text-xs text-on-surface-variant">№46 · 32 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Sun'iy intellekt va algoritmik narxlash bo'yicha tavsiyalar</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Avtomatlashtirilgan narx belgilash tizimlarining raqobatga ta'siri va xalqaro tajriba.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">18.03.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="tahlil">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-on-tertiary-container/20 text-on-tertiary-container text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Tahlil</span><span class="text-xs text-on-surface-variant">№45 · 56 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Telekommunikatsiya bozoridagi HHI dinamikasi: 2018–2025</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Mobil aloqa va internet xizmatlari bozoridagi kontsentratsiya o'zgarishlari.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">11.03.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="metodologiya">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-green-100 text-green-800 text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Metodologiya</span><span class="text-xs text-on-surface-variant">№44 · 40 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Bozor chegaralarini aniqlash: SSNIP testi qo'llanmasi</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Tegishli bozorni belgilashda zamonaviy ekonometrik yondashuvlar va amaliy misollar.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">28.02.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="hisobot">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-primary/10 text-primary text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Hisobot</span><span class="text-xs text-on-surface-variant">№43 · 72 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Oziq-ovqat bozorida narx shakllanishi va raqobat</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Asosiy iste'mol tovarlari bo'yicha narxlar dinamikasi va taklif zanjirlari tahlili.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">14.02.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="tahlil">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-on-tertiary-container/20 text-on-tertiary-container text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Tahlil</span><span class="text-xs text-on-surface-variant">№42 · 48 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Bank xizmatlari bozorida iste'molchi huquqlari</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Moliyaviy xizmatlardagi shaffoflik, yashirin to'lovlar va iste'molchi himoyasi.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">31.01.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="brifing">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-tertiary-container/20 text-tertiary-container text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Brifing</span><span class="text-xs text-on-surface-variant">№41 · 24 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Davlat xaridlarida raqobatni rivojlantirish</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Tender jarayonlaridagi cheklovlar va ochiq raqobatni ta'minlash mexanizmlari.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">17.01.2026</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="metodologiya">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-green-100 text-green-800 text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Metodologiya</span><span class="text-xs text-on-surface-variant">№40 · 36 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Iste'molchi so'rovlarini o'tkazish metodikasi</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Sotsiologik tadqiqotlarda namuna shakllantirish va ma'lumotlarni tahlil qilish.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">26.12.2025</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+      <article class="research-card bg-surface rounded-xl shadow-sm border border-outline-variant overflow-hidden hover:shadow-md transition group cursor-pointer" data-category="hisobot">
+        <div class="aspect-[16/10] overflow-hidden bg-primary/5"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80" alt=""/></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3"><span class="bg-primary/10 text-primary text-[11px] font-bold px-2 py-1 rounded uppercase tracking-wider">Hisobot</span><span class="text-xs text-on-surface-variant">№39 · 68 sahifa</span></div>
+          <h3 class="font-semibold text-on-surface text-[18px] leading-snug mb-2 group-hover:text-primary transition line-clamp-2">Dori-darmon bozoridagi raqobat holati tahlili</h3>
+          <p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Farmatsevtika sohasidagi narxlar, import bog'liqligi va mahalliylashtirish istiqbollari.</p>
+          <div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant">12.12.2025</span><span class="text-primary font-semibold flex items-center gap-1">PDF yuklash <span class="material-symbols-outlined text-sm">download</span></span></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex items-center justify-center gap-2 mt-10">
+      <button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-colors"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+      <button class="w-10 h-10 rounded bg-primary text-white font-semibold text-sm">1</button>
+      <button class="w-10 h-10 rounded border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-colors font-semibold text-sm">2</button>
+      <button class="w-10 h-10 rounded border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-colors font-semibold text-sm">3</button>
+      <span class="text-on-surface-variant text-sm px-1">...</span>
+      <button class="w-10 h-10 rounded border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-colors font-semibold text-sm">9</button>
+      <button class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-colors"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full bg-primary text-on-primary pt-12 pb-6">
+  <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center flex-shrink-0"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M4 8 L4 22 M4 8 L14 14 L24 8 M24 8 L24 22" stroke="#002a78" stroke-width="2.2" stroke-linecap="square" fill="none"/><circle cx="14" cy="14" r="1.8" fill="#002a78"/></svg></div>
+          <span class="text-[14px] font-bold leading-tight">Markaz</span>
+        </div>
+        <p class="text-secondary-fixed-dim text-sm leading-relaxed">Raqobat siyosati va iste'molchilar huquqlari tadqiqotlari markazi.</p>
+      </div>
+      <div>
+        <h4 class="text-[12px] font-bold uppercase tracking-widest text-tertiary-fixed mb-3">Sahifalar</h4>
+        <ul class="space-y-2 text-sm"><li><a href="index.html" class="text-secondary-fixed-dim hover:text-white transition">Bosh sahifa</a></li><li><a href="markaz-haqida.html" class="text-secondary-fixed-dim hover:text-white transition">Markaz haqida</a></li><li><a href="yangiliklar.html" class="text-secondary-fixed-dim hover:text-white transition">Yangiliklar</a></li><li><a href="tadqiqotlar.html" class="text-secondary-fixed-dim hover:text-white transition">Tadqiqotlar</a></li><li><a href="axborot-xizmati.html" class="text-secondary-fixed-dim hover:text-white transition">Axborot xizmati</a></li><li><a href="boglanish.html" class="text-secondary-fixed-dim hover:text-white transition">Bog'lanish</a></li></ul>
+      </div>
+      <div>
+        <h4 class="text-[12px] font-bold uppercase tracking-widest text-tertiary-fixed mb-3">Aloqa</h4>
+        <address class="not-italic text-sm text-secondary-fixed-dim leading-relaxed">100047, Toshkent shahri,<br/>Mirzo Ulug'bek tumani,<br/>Buyuk turon ko'chasi, 41</address>
+        <p class="text-sm text-secondary-fixed-dim mt-2"><a href="tel:+998712000000" class="hover:text-white transition">+998 71 200 00 00</a></p>
+      </div>
+    </div>
+    <div class="pt-4 border-t border-white/10 text-xs text-secondary-fixed-dim">© 2026 — Markaz. Barcha huquqlar himoyalangan.</div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+  // Research filter
+  document.querySelectorAll('.research-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.research-filter').forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('bg-surface-container-low', 'text-on-surface-variant'); });
+      btn.classList.add('bg-primary', 'text-white');
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.research-card').forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) { card.style.display = ''; } else { card.style.display = 'none'; }
+      });
+    });
+  });
+
+  // Open research detail on card click
+  document.querySelectorAll('.research-card').forEach(card => card.addEventListener('click', () => { location.href = 'tadqiqot.html'; }));
+</script>
+</body>
+</html>

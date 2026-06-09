@@ -1,0 +1,42 @@
+# OS-level
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (agar keyinchalik ishlatilsa)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output (agar bo'lsa)
+dist/
+build/
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Temp files
+tmp/
+temp/
+*.tmp
